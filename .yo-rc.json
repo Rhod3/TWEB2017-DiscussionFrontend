@@ -4,6 +4,17 @@
     "angularCookies": false,
     "angularAnimate": false,
     "angularSanitize": false,
-    "angularBootstrap": true
+    "angularBootstrap": true,
+    "modules": [
+      {
+        "name": "rest"
+      }
+    ],
+    "menu": [
+      {
+        "link": "rest",
+        "title": "Rest"
+      }
+    ]
   }
 }
