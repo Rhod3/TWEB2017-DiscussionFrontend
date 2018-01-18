@@ -1,0 +1,9 @@
+{
+  "generator-angm": {
+    "appName": "ang-discussion",
+    "angularCookies": false,
+    "angularAnimate": false,
+    "angularSanitize": false,
+    "angularBootstrap": true
+  }
+}
