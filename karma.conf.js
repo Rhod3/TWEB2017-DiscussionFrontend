@@ -34,6 +34,11 @@ module.exports = function (config) {
 			'app/modules/rest/restRoute.js',
 			'app/modules/rest/restService.js',
 			'app/modules/rest/rest-test.js',
+			'app/modules/blog/blogModule.js',
+			'app/modules/blog/blogCtrl.js',
+			'app/modules/blog/blogRoute.js',
+			'app/modules/blog/blogService.js',
+			'app/modules/blog/blog-test.js',
 		],
 
 		// Test results reporter to use

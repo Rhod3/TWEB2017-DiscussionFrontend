@@ -8,12 +8,19 @@
     "modules": [
       {
         "name": "rest"
+      },
+      {
+        "name": "blog"
       }
     ],
     "menu": [
       {
         "link": "rest",
         "title": "Rest"
+      },
+      {
+        "link": "blog",
+        "title": "Blog"
       }
     ]
   }
