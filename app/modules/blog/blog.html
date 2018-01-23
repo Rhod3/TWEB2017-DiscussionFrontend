@@ -1,119 +1,135 @@
 <!-- Page Content -->
 <div class="container">
-		
-			<div class="row">
-				<!-- Blog Post Content Column -->
-				<div class="col-lg-8">
-		
-					<!-- Blog Post -->
-		
-					<!-- Title -->
-					<h1>Blog Post Title</h1>
-		
-					<!-- Author -->
-					<p class="lead">
-						by
-						<a href="#">Start Bootstrap</a>
-					</p>
-		
-					<hr>
-		
-					<!-- Date/Time -->
-					<p>
-						<span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
-		
-					<hr>
-		
-					<!-- Preview Image -->
-					<img class="img-responsive" src="http://placehold.it/900x300" alt="">
-		
-					<hr>
-		
-					<!-- Post Content -->
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe
-						quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati
-						impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur
-						neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora
-						commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione
-						tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
-		
-					<hr>
-		
-					<!-- Blog Comments -->
-		
-					<!-- Comments Form -->
-					<div class="well">
-						<h4>Leave a Comment:</h4>
+
+	<div class="row">
+		<!-- Blog Post Content Column -->
+		<div class="col-lg-8">
+
+			<!-- Blog Post -->
+
+			<!-- Title -->
+			<h1>Standard Corporate Title</h1>
+
+			<!-- Author -->
+			<p class="lead">
+				by
+				<a href="http://cbsg.sf.net">The Corporate BS Generator</a>
+			</p>
+
+			<hr>
+
+			<!-- Date/Time -->
+			<p>
+				<span class="glyphicon glyphicon-time"></span> Posted on April 24, 2013 at 9:00 PM</p>
+
+			<hr>
+
+			<!-- Preview Image -->
+			<img class="img-responsive" src="http://ak6.picdn.net/shutterstock/videos/1635136/thumb/1.jpg" alt="">
+
+			<hr>
+
+			<!-- Post Content -->
+			<p class="lead">The Products Managers calibrate our constructive deliverables across boundaries, while we continue to work tirelessly and diligently to accelerate a time-phase.</p>
+			<p>Visions result in our analytic momentums. The cross-pollination solutionizes our front-end and wide-spectrum attractiveness at the individual, team and organizational level, while the Chief Operations Officer (COO) champions our disintermediation. The innovator minimizes the consumer/agent disconnects.</p>
+				<p>The Chief of Transition Transformation takes the elevator beyond the top floor.</p>
+				<p>The steering committee articulates controlled transformation processes. High-performing co-innovations deliver maximum impact. A craftsmanship conservatively granularizes takeaways; this is why the key representatives mitigate our hiccups across and beyond the matrices. Internally and externally, our executive talents influence the accelerating risk/return profiles. Multidisciplinary and inspiring roadmaps efficiently target the board-level executives. The Digital Marketers quickly establish rock-solid, compelling, big data.</p>
+				<p>Actually, our outside-in best practice prioritizes the white-collar workers.</p>
+				<p>The Acting Supervisor of IT Strategy influences the co-innovations. The key people adapt our one-to-one effectiveness ahead of schedule, while matrixed plannings aggregate our governance from the get-go.</p>
+				<p>Our agilities enforce a service-oriented goal.</p>
+
+			<hr>
+
+			<!-- Blog Comments -->
+
+			<!-- Comments Form -->
+			<div class="well">
+				<h4>Leave a comment:</h4>
+				<form role="form">
+					<div class="form-group">
+						<input class="form-control" type="text" placeholder="Author" ng-model="vm.authorName" />
+						<input class="form-control" type="text" placeholder="AuthorID" ng-model="vm.authorID" />
+						<textarea class="form-control" rows="3" placeholder="Message" ng-model="vm.message"></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary" ng-click="vm.postComment(vm.articleId)">Submit</button>
+				</form>
+			</div>
+
+			<hr>
+
+			<!-- Posted Comments -->
+
+			<!-- Comment -->
+			<div class="media" ng-repeat="c in vm.comments">
+				<a class="pull-left" href="#">
+					<img class="media-object" src="http://placehold.it/64x64" alt="">
+				</a>
+				<div class="media-body">
+					<h4 class="media-heading">
+						<button type="button" class="btn btn-info" ng-click="showReplyBox = ! showReplyBox">Reply</button>
+						<button type="button" class="btn btn-success" ng-click="showEditBox = ! showEditBox">Edit</button>
+						<button type="button" class="btn btn-danger" ng-click="vm.deleteComment(c.id)" ng-if="c.children.length === 0">Delete</button>
+						{{c.author}}
+						<small>{{c.date}} </small>
+					</h4>
+					{{c.message}}
+					<div class="well" ng-show="showReplyBox">
+						<h4>Reply to comment:</h4>
 						<form role="form">
 							<div class="form-group">
-								<input class="form-control" type="text" placeholder="Author" ng-model="vm.authorName" />
-								<input class="form-control" type="text" placeholder="AuthorID" ng-model="vm.authorID" />
-								<textarea class="form-control" rows="3" ng-model="vm.message"></textarea>
+								<input class="form-control" type="text" placeholder="Author" ng-model="vm.replyAuthorName" />
+								<input class="form-control" type="text" placeholder="AuthorID" ng-model="vm.replyAuthorID" />
+								<textarea class="form-control" rows="3" placeholder="Message" ng-model="vm.replyMessage"></textarea>
 							</div>
-							<button type="submit" class="btn btn-primary" ng-click="vm.postComment(vm.articleId)">Submit</button>
+							<button type="submit" class="btn btn-primary" ng-click="vm.replyToComment(vm.articleId, c.id)">Submit</button>
 						</form>
 					</div>
-		
-					<hr>
-		
-					<!-- Posted Comments -->
-		
-					<!-- Comment -->
-					<div class="media" ng-repeat="c in vm.comments">
+					<div class="well" ng-show="showEditBox">
+						<h4>Edit comment:</h4>
+						<form role="form">
+							<div class="form-group">
+								<textarea class="form-control" rows="3" placeholder="Message" ng-model="vm.editMessage"></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary" ng-click="vm.editComment(c.id, c.author, c.authorID)">Submit</button>
+						</form>
+					</div>
+					<div class="media" ng-repeat="d in c.children">
 						<a class="pull-left" href="#">
 							<img class="media-object" src="http://placehold.it/64x64" alt="">
 						</a>
 						<div class="media-body">
-							<h4 class="media-heading">{{c.author}}
-								<small>{{c.date}}  </small>
-								<button type="button" class="btn btn-danger" ng-click="vm.deleteComment(c.id)">Delete</button>
+							<h4 class="media-heading">
+								<button type="button" class="btn btn-success" ng-click="showEditBox = ! showEditBox">Edit</button>
+								<button type="button" class="btn btn-danger" ng-click="vm.deleteComment(d.id)">Delete</button>
+								{{d.author}}
+								<small>{{d.date}} </small>
 							</h4>
-							{{c.message}}
+							{{d.message}}
+							<div class="well" ng-show="showEditBox">
+								<h4>Edit comment:</h4>
+								<form role="form">
+									<div class="form-group">
+										<textarea class="form-control" rows="3" placeholder="Message" ng-model="vm.editMessage"></textarea>
+									</div>
+									<button type="submit" class="btn btn-primary" ng-click="vm.editComment(d.id, d.author, d.authorID)">Submit</button>
+								</form>
+							</div>
 						</div>
 					</div>
-		
-					<!-- Comment -->
-					<!--
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img class="media-object" src="http://placehold.it/64x64" alt="">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Start Bootstrap
-								<small>August 25, 2014 at 9:30 PM</small>
-							</h4>
-							Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
-							in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis
-							in faucibus.
-
-							<div class="media">
-								<a class="pull-left" href="#">
-									<img class="media-object" src="http://placehold.it/64x64" alt="">
-								</a>
-								<div class="media-body">
-									<h4 class="media-heading">Nested Start Bootstrap
-										<small>August 25, 2014 at 9:30 PM</small>
-									</h4>
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
-									in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis
-									in faucibus.
-								</div>
-							</div>
-						</div>
-					</div> -->
 				</div>
 			</div>
-			       <!-- Footer -->
-				   <footer>
-						<div class="row">
-							<div class="col-lg-12">
-								<p>Copyright &copy; Your Website 2014</p>
-							</div>
-						</div>
-						<!-- /.row -->
-					</footer>
 		</div>
+	</div>
+
+	<hr>
+
+	<!-- Footer -->
+	<footer>
+		<div class="row">
+			<div class="col-lg-12">
+				<p>Copyright &copy; BasileOuNico 2018</p>
+			</div>
+		</div>
+		<!-- /.row -->
+	</footer>
+</div>

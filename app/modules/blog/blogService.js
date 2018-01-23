@@ -21,6 +21,7 @@
 		return {
 			executeGetRequest: executeGetRequest,
 			executePostRequest: executePostRequest,
+			executePutRequest: executePutRequest,
 			executeDeleteRequest: executeDeleteRequest
 		};
 
@@ -85,6 +86,38 @@
 				});
 			});
 		}
+
+		function executePutRequest(urlString, payload) {
+			
+						return new Promise((resolve) => {
+							console.log(`PUTING ${urlString}...`);
+			
+							// Simple PUT request example:
+							$http({
+								method: 'PUT',
+								url: urlString,
+								data: payload,
+								headers: {
+									'Content-Type': 'application/json',
+									'Accept': '*/*'
+								}
+							}).then(function successCallback(response) {
+								// this callback will be called asynchronously
+								// when the response is available
+								resolve({
+									status: 1,
+									response,
+								});
+							}, function errorCallback(response) {
+								// called asynchronously if an error occurs
+								// or server returns response with an error status.
+								resolve({
+									status: 0,
+									response,
+								});
+							});
+						});
+					}
 
 		function executeDeleteRequest(urlString, payload) {
 
