@@ -1,13 +1,4 @@
-
 # Created by https://www.gitignore.io/api/node,angular,visualstudiocode
-
-### Angular ###
-## Angular ##
-# compiled output
-/dist
-/tmp
-/app/**/*.js
-/app/**/*.js.map
 
 # dependencies
 /node_modules
