@@ -28,4 +28,4 @@ If you want to test this project locally, you first have to run the microservice
 * `bower install`
 * `grunt dev`
 
-The website should now automatically open on your browser.
+The website should now automatically open on your browser. Don't forget to click on the "Blog" on the navbar to access the microservice frontend example !
