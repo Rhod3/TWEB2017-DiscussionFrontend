@@ -28,7 +28,7 @@ If you want to test this project locally, you first have to run the microservice
 * `bower install`
 * `grunt dev`
 
-The website should now automatically open on your browser. Don't forget to click on the "Blog" on the navbar to access the microservice frontend example !
+The website should now automatically open on your browser. Don't forget to click on "Blog" on the navbar to access the microservice frontend example !
 
 ## CORS Problem
-You might encounter some CORS problem while testing the app, as we couldn't make the server accept cross-origin request. If so, make sure that line 27-31 in `app.config.js` are uncommented and install a [browser addon](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) that allow CORS. This should "solve" the problem, even though it's more an hack than really solving the problem.
+You might encounter some CORS problem while testing the app, as we couldn't make the server allow cross-origin request. If so, make sure that line 27-31 in `app.config.js` are uncommented and install a [browser addon](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) that allow CORS. This should "solve" the problem, even though it's more an hack than really solving the problem.
