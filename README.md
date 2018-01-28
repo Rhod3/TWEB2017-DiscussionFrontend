@@ -6,7 +6,7 @@ It uses an intermediate working version of the microservice. Thus, you can only 
 
 Here is a screenshot of the comment section of the website running locally:
 
-![Comment section](/images/screenshot.png "Comment section")
+![Screenshot of the comment section](/images/screenshot.PNG "Comment section")
 
 You can see a few specific things:
 * You can only nest comment to one level (purely arbitrary choice)
